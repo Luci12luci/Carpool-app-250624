@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prihlásenie na cestu</title>
+</head>
+<body>
+    <h1>Prihlásenie na cestu</h1>
+    <form action="{{ url_for('register_for_journey') }}" method="POST">
+        <input type="text" name="username" placeholder="Používateľské meno" required>
+        <input type="password" name="password" placeholder="Heslo" required>
+        <input type="hidden" name="journey_id" value="{{ journey_id }}">
+        <button type="submit">Prihlásiť sa na cestu</button>
+    </form>
+</body>
+</html>

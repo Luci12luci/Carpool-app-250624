@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Trip</title>
+</head>
+<body>
+    <h1>Add Trip</h1>
+
+        <form action="{{ url_for('create_journey') }}" method="POST">
+        <input type="text" id="route" name="from" placeholder="From">
+        <input type="text" id="route" name="to" placeholder="To">
+        <input type="time" id="time" name="time" placeholder="Time">
+        <input type="date" id="date" name="date" placeholder="Date">
+        <input type="text" name="podmienky" rows="4" placeholder="Notes">
+        <button type="submit">Add Trip</button>
+    </form>
+</body>
+</html>

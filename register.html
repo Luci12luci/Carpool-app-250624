@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RidePals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>RidePals</h1>
+    <div class="form-container">
+        <form action="{{ url_for('register') }}" method="POST">
+            <h2>Registrate</h2>
+            <input type="text" name="username" placeholder="New User" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Registrate</button>
+        </form>
+        <form action="{{ url_for('login') }}" method="POST">
+            <h2>Log in</h2>
+            <input type="text" name="username" placeholder="Existing User" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

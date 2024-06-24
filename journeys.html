@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search a ride</title>
+</head>
+<body>
+    <h1>Search a Ride</h1>
+    <form action="{{ url_for('search_journeys') }}" method="GET">
+        <input type="text" id="route" name="from" placeholder="From">
+        <input type="text" id="route" name="to" placeholder="To">
+        <input type="date" id="date" name="date" placeholder="Date">
+        <input type="submit" value="Search">
+    </form>
+    <ul>
+        {% for journey in journeys %}
+            <li> {{ journey.route_from }} - {{ journey.route_to }} - {{ journey.date }} ({{ journey.seats_available }} voľných miest)</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
